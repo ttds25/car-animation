@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: lightblue;
+}
+
+.car {
+    width: 80px;
+    left: 20px;
+    position: absolute;
+    transform: scaleX(-1); /* Flip the image horizontally */
+    animation: car 10s linear infinite;
+    animation-play-state: paused; /* Initially paused */
+}
+
+.button {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.button button {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+@keyframes car {
+    0% {
+        left: -10%;
+    }
+    100% {
+        left: 110%;
+    }
+}
